@@ -527,11 +527,44 @@
   font-weight: 600;
 }
 
-.pricing__card {
-  max-width: 420px;
-  margin-inline: auto;
-  padding: 2.5rem 2rem;
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
   text-align: left;
+  align-items: stretch;
+}
+
+.pricing__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+
+.pricing__card--featured {
+  border-color: rgba(126, 211, 173, 0.45);
+  background: linear-gradient(
+    160deg,
+    rgba(61, 139, 122, 0.12),
+    var(--glass)
+  );
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.pricing__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(126, 211, 173, 0.2);
+  color: var(--mint-400);
 }
 
 .pricing__plan-name {
@@ -587,6 +620,7 @@
 
 .pricing__cta {
   width: 100%;
+  margin-top: auto;
 }
 
 .pricing__footer {
@@ -732,6 +766,12 @@
 
   .payments__grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-inline: auto;
   }
 }
 
