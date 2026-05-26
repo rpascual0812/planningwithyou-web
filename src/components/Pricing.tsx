@@ -4,6 +4,7 @@ type PaidTier = {
   id: string
   name: string
   featured?: boolean
+  comingSoon?: boolean
   monthly: { price: string; note: string }
   yearly: { price: string; note: string }
   features: string[]
@@ -53,13 +54,14 @@ const paidTiers: PaidTier[] = [
   {
     id: 'ai-plus',
     name: 'AI Plus',
+    comingSoon: true,
     monthly: {
       price: '₱1,999',
-      note: 'Billed monthly via Paymongo',
+      note: 'Pricing announced at launch',
     },
     yearly: {
       price: '₱19,990',
-      note: 'Save 2 months — billed yearly',
+      note: 'Pricing announced at launch',
     },
     features: [
       'Everything in Professional',
@@ -68,7 +70,7 @@ const paidTiers: PaidTier[] = [
       'Automated follow-up reminders',
       'Priority email & chat support',
     ],
-    cta: 'Get started with AI',
+    cta: 'Coming soon',
   },
 ]
 
@@ -81,8 +83,8 @@ export function Pricing() {
         <span className="section-label">Pricing</span>
         <h2 className="section-title">Simple plans for growing planners</h2>
         <p className="section-subtitle">
-          Start free, then upgrade when you need more quotations, integrations,
-          and AI-powered workflows.
+          Start free, then upgrade when you need more quotations and
+          integrations. AI Plus — our next major update — is coming soon.
         </p>
 
         <div className="pricing__toggle" role="group" aria-label="Billing period">
@@ -128,36 +130,71 @@ export function Pricing() {
 
           {paidTiers.map((tier) => {
             const billing = yearly ? tier.yearly : tier.monthly
+            const isComingSoon = tier.comingSoon === true
+
             return (
               <article
                 key={tier.id}
-                className={`card pricing__card${tier.featured ? ' pricing__card--featured' : ''}`}
+                className={`card pricing__card${tier.featured ? ' pricing__card--featured' : ''}${isComingSoon ? ' pricing__card--coming-soon' : ''}`}
+                aria-disabled={isComingSoon || undefined}
               >
                 {tier.featured && (
                   <span className="pricing__badge">Most popular</span>
                 )}
-                <h3 className="pricing__plan-name">{tier.name}</h3>
-                <div className="pricing__price">
-                  <span className="pricing__amount">{billing.price}</span>
-                  <span className="pricing__period">
-                    {yearly ? '/year' : '/month'}
+                {isComingSoon && (
+                  <span className="pricing__badge pricing__badge--soon">
+                    Coming soon
                   </span>
-                </div>
-                <p className="pricing__note">{billing.note}</p>
+                )}
+                <h3 className="pricing__plan-name">{tier.name}</h3>
+                {isComingSoon ? (
+                  <>
+                    <p className="pricing__coming-soon-lead">
+                      Upcoming major update
+                    </p>
+                    <p className="pricing__note">
+                      AI-powered quotations, smart suggestions, and automated
+                      follow-ups are in development. Stay tuned.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <div className="pricing__price">
+                      <span className="pricing__amount">{billing.price}</span>
+                      <span className="pricing__period">
+                        {yearly ? '/year' : '/month'}
+                      </span>
+                    </div>
+                    <p className="pricing__note">{billing.note}</p>
+                  </>
+                )}
                 <ul className="pricing__features">
                   {tier.features.map((item) => (
                     <li key={item}>
-                      <span aria-hidden="true">✓</span>
+                      <span aria-hidden="true">{isComingSoon ? '◦' : '✓'}</span>
                       {item}
                     </li>
                   ))}
                 </ul>
-                <a href="#" className="btn btn-primary btn-lg pricing__cta">
-                  {tier.cta}
-                </a>
-                <p className="pricing__footer">
-                  Credit card required · Powered by Paymongo
-                </p>
+                {isComingSoon ? (
+                  <button
+                    type="button"
+                    className="btn btn-secondary btn-lg pricing__cta"
+                    disabled
+                    aria-label="AI Plus — coming soon, not yet available"
+                  >
+                    {tier.cta}
+                  </button>
+                ) : (
+                  <a href="#" className="btn btn-primary btn-lg pricing__cta">
+                    {tier.cta}
+                  </a>
+                )}
+                {!isComingSoon && (
+                  <p className="pricing__footer">
+                    Credit card required · Powered by Paymongo
+                  </p>
+                )}
               </article>
             )
           })}
