@@ -9,10 +9,10 @@ const productLinks = [
 
 const legalLinks = [
   { to: '/privacy-policy', label: 'Privacy Policy' },
-  { to: '/terms-and-conditions', label: 'Terms and Conditions of Use' },
+  { to: '/terms-and-conditions', label: 'Terms of Service' },
   {
     to: '/platform-terms',
-    label: 'Platform Terms of Use: User Access & Responsibilities',
+    label: 'Terms of Use',
   },
 ]
 
