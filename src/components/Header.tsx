@@ -33,10 +33,10 @@ export function Header() {
           ))}
         </nav>
         <div className="header__actions">
-          <Link to="/#pricing" className="btn btn-secondary header__sign-in">
+          <Link to="https://app.planningwithyou.com" className="btn btn-secondary header__sign-in">
             Sign in
           </Link>
-          <Link to="/#pricing" className="btn btn-primary">
+          <Link to="https://app.planningwithyou.com/register" className="btn btn-primary">
             Get started
           </Link>
         </div>

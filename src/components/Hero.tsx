@@ -16,7 +16,7 @@ export function Hero() {
           </p>
           <div className="hero__cta">
             <a href="#pricing" className="btn btn-primary btn-lg">
-              Start free trial
+              Start for free
             </a>
             <a href="#features" className="btn btn-secondary btn-lg">
               See how it works

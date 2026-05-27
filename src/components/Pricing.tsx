@@ -123,7 +123,7 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <a href="#" className="btn btn-secondary btn-lg pricing__cta">
+            <a href="https://app.planningwithyou.com/register" className="btn btn-secondary btn-lg pricing__cta">
               {freeTier.cta}
             </a>
           </article>
@@ -186,7 +186,7 @@ export function Pricing() {
                     {tier.cta}
                   </button>
                 ) : (
-                  <a href="#" className="btn btn-primary btn-lg pricing__cta">
+                  <a href="https://app.planningwithyou.com/register" className="btn btn-primary btn-lg pricing__cta">
                     {tier.cta}
                   </a>
                 )}

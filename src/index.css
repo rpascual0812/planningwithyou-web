@@ -1,4 +1,5 @@
 :root {
+  /* Logo palette */
   --navy-950: #060d18;
   --navy-900: #0a1628;
   --navy-800: #0f2137;
@@ -10,32 +11,59 @@
   --mint-400: #7ed3ad;
   --mint-300: #9ee4c4;
   --mint-500: #5ec49a;
-  --white: #f0f4f8;
-  --muted: #94a8bc;
-  --border: rgba(126, 211, 173, 0.15);
-  --glass: rgba(15, 33, 55, 0.65);
+
+  /* Light theme surfaces */
+  --bg-page: #ffffff;
+  --bg-subtle: #f4f8fb;
+  --bg-muted: #e8eef4;
+  --bg-inset: #f0f4f8;
+  --bg-elevated: #ffffff;
+
+  /* Typography */
+  --text-primary: var(--navy-900);
+  --text-secondary: var(--steel-500);
+  --text-muted: #5c7389;
+  --text-on-dark: #f0f4f8;
+  --text-accent: var(--teal-600);
+
+  /* UI */
+  --border: rgba(15, 33, 55, 0.1);
+  --border-strong: rgba(15, 33, 55, 0.16);
+  --shadow-sm: 0 1px 2px rgba(10, 22, 40, 0.05);
+  --shadow-md: 0 8px 32px rgba(10, 22, 40, 0.08);
+  --shadow-lg: 0 20px 50px rgba(10, 22, 40, 0.1);
+  --shadow-mint: 0 8px 28px rgba(94, 196, 154, 0.4);
+
+  --card-bg: var(--bg-elevated);
+  --glass: var(--bg-elevated);
+
   --gradient-brand: linear-gradient(
     135deg,
     var(--navy-800) 0%,
-    var(--teal-600) 50%,
-    var(--mint-400) 100%
+    var(--teal-500) 52%,
+    var(--mint-500) 100%
   );
   --gradient-hero: radial-gradient(
-      ellipse 80% 60% at 50% -10%,
-      rgba(61, 139, 122, 0.25),
-      transparent 60%
+      ellipse 85% 65% at 50% -15%,
+      rgba(126, 211, 173, 0.22),
+      transparent 58%
     ),
     radial-gradient(
-      ellipse 50% 40% at 90% 20%,
-      rgba(74, 107, 138, 0.2),
+      ellipse 55% 45% at 95% 10%,
+      rgba(74, 107, 138, 0.12),
+      transparent 52%
+    ),
+    radial-gradient(
+      ellipse 40% 35% at 5% 40%,
+      rgba(61, 139, 122, 0.08),
       transparent 50%
     );
 
   font-family: 'Poppins', system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: var(--white);
-  background: var(--navy-950);
+  color: var(--text-primary);
+  background: var(--bg-page);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -51,7 +79,7 @@
 body {
   margin: 0;
   min-height: 100svh;
-  background: var(--navy-950);
+  background: var(--bg-page);
 }
 
 #root {
@@ -97,7 +125,7 @@ ul {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--mint-400);
+  color: var(--teal-600);
   margin-bottom: 0.75rem;
 }
 
@@ -107,10 +135,11 @@ ul {
   line-height: 1.2;
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
+  color: var(--text-primary);
 }
 
 .section-subtitle {
-  color: var(--muted);
+  color: var(--text-muted);
   font-size: 1.05rem;
   max-width: 36rem;
   margin: 0 auto 3rem;
@@ -133,7 +162,9 @@ ul {
   transition:
     transform 0.2s,
     box-shadow 0.2s,
-    background 0.2s;
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
 }
 
 .btn:active {
@@ -141,25 +172,27 @@ ul {
 }
 
 .btn-primary {
-  background: var(--mint-400);
+  background: linear-gradient(135deg, var(--mint-500) 0%, var(--mint-400) 100%);
   color: var(--navy-900);
-  box-shadow: 0 4px 24px rgba(126, 211, 173, 0.35);
+  box-shadow: var(--shadow-mint);
 }
 
 .btn-primary:hover {
-  background: var(--mint-300);
-  box-shadow: 0 6px 32px rgba(126, 211, 173, 0.45);
+  background: linear-gradient(135deg, var(--mint-400) 0%, var(--mint-300) 100%);
+  box-shadow: 0 10px 36px rgba(94, 196, 154, 0.5);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--white);
-  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--navy-800);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  border-color: var(--mint-400);
-  color: var(--mint-400);
+  border-color: var(--teal-500);
+  color: var(--teal-600);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-lg {
@@ -168,10 +201,10 @@ ul {
 }
 
 .card {
-  background: var(--glass);
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
-  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-md);
   transition:
     border-color 0.25s,
     transform 0.25s,
@@ -179,9 +212,9 @@ ul {
 }
 
 .card:hover {
-  border-color: rgba(126, 211, 173, 0.35);
+  border-color: rgba(61, 139, 122, 0.35);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-lg);
 }
 
 .gradient-text {
