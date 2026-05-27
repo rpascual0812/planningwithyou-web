@@ -135,7 +135,7 @@ export function TermsAndConditionsPage() {
       <h2>16. Contact</h2>
       <p>
         For questions about these Terms, contact{' '}
-        <a href="mailto:legal@planningwithyou.com">legal@planningwithyou.com</a>.
+        <a href="mailto:support@planningwithyou.com">support@planningwithyou.com</a>.
       </p>
     </LegalPage>
   )

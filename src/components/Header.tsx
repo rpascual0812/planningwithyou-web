@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { SectionLink } from './SectionLink'
 
 const navLinks = [
-  { to: '/#features', label: 'Features' },
-  { to: '/#integrations', label: 'Integrations' },
-  { to: '/#payments', label: 'Payments' },
-  { to: '/#pricing', label: 'Pricing' },
+  { sectionId: 'features', label: 'Features' },
+  { sectionId: 'integrations', label: 'Integrations' },
+  { sectionId: 'payments', label: 'Payments' },
+  { sectionId: 'pricing', label: 'Pricing' },
 ]
 
 export function Header() {
@@ -27,18 +28,24 @@ export function Header() {
         </Link>
         <nav className="header__nav" aria-label="Main">
           {navLinks.map((link) => (
-            <Link key={link.to} to={link.to}>
+            <SectionLink key={link.sectionId} sectionId={link.sectionId}>
               {link.label}
-            </Link>
+            </SectionLink>
           ))}
         </nav>
         <div className="header__actions">
-          <Link to="https://app.planningwithyou.com" className="btn btn-secondary header__sign-in">
+          <a
+            href="https://app.planningwithyou.com"
+            className="btn btn-secondary header__sign-in"
+          >
             Sign in
-          </Link>
-          <Link to="https://app.planningwithyou.com/register" className="btn btn-primary">
+          </a>
+          <a
+            href="https://app.planningwithyou.com/register"
+            className="btn btn-primary"
+          >
             Get started
-          </Link>
+          </a>
         </div>
       </div>
     </header>

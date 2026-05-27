@@ -100,7 +100,7 @@ export function PrivacyPolicyPage() {
       <p>
         Depending on your location, you may have rights to access, correct,
         delete, or restrict processing of your personal data, and to object to
-        certain processing. Contact us at privacy@planningwithyou.com to exercise
+        certain processing. Contact us at support@planningwithyou.com to exercise
         these rights.
       </p>
 
@@ -127,8 +127,8 @@ export function PrivacyPolicyPage() {
       <h2>10. Contact us</h2>
       <p>
         Questions about this Privacy Policy may be sent to{' '}
-        <a href="mailto:privacy@planningwithyou.com">
-          privacy@planningwithyou.com
+        <a href="mailto:support@planningwithyou.com">
+          support@planningwithyou.com
         </a>
         .
       </p>

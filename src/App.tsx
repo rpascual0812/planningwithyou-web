@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ScrollToHash } from './components/ScrollToHash'
 import { ScrollToTop } from './components/ScrollToTop'
 import { HomePage } from './pages/HomePage'
 import { PlatformTermsPage } from './pages/PlatformTermsPage'
@@ -10,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ScrollToHash />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
+import { SectionLink } from './SectionLink'
 
 const productLinks = [
-  { to: '/#features', label: 'Features' },
-  { to: '/#integrations', label: 'Integrations' },
-  { to: '/#payments', label: 'Payments' },
-  { to: '/#pricing', label: 'Pricing' },
+  { sectionId: 'features', label: 'Features' },
+  { sectionId: 'integrations', label: 'Integrations' },
+  { sectionId: 'payments', label: 'Payments' },
+  { sectionId: 'pricing', label: 'Pricing' },
 ]
 
 const legalLinks = [
@@ -33,9 +34,9 @@ export function Footer() {
         </div>
         <nav className="footer__nav" aria-label="Product">
           {productLinks.map((link) => (
-            <Link key={link.to} to={link.to}>
+            <SectionLink key={link.sectionId} sectionId={link.sectionId}>
               {link.label}
-            </Link>
+            </SectionLink>
           ))}
         </nav>
         <nav className="footer__legal" aria-label="Legal">
