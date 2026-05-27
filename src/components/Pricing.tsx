@@ -103,7 +103,7 @@ export function Pricing() {
             aria-pressed={yearly}
           >
             Yearly
-            <span className="pricing__save">Save 17%</span>
+            <span className="pricing__save">2 months free</span>
           </button>
         </div>
 
