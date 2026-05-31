@@ -2,8 +2,9 @@
 # Serve the Vite build output from /var/www/planningwithyou-web/dist
 #
 # Important for Facebook Open Graph:
-# - Do NOT proxy this host to the Django API (HEAD requests must return 200 for static files).
-# - Share https://planningwithyou.com/ (not www) until www has a valid TLS certificate.
+# - Deploy the full dist/ folder including dist/og/*.jpg
+# - OG image URLs must return Content-Type: image/jpeg (not text/html)
+# - Do NOT proxy this host to the Django API
 
 server {
     listen 443 ssl http2;
@@ -20,9 +21,11 @@ server {
         try_files /sitemap.xml =404;
     }
 
-    location /og/ {
+    # OG images — must be served as static files, never SPA index.html
+    location ~* ^/og/.+\.(jpe?g|png)$ {
         try_files $uri =404;
         add_header Cache-Control "public, max-age=86400";
+        access_log off;
     }
 
     location / {
