@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { APP_REGISTER_URL } from '../config/appLinks'
 
 type PaidTier = {
   id: string
@@ -123,7 +124,11 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <a href="https://app.planningwithyou.com/register" className="btn btn-secondary btn-lg pricing__cta">
+            <a
+              href={APP_REGISTER_URL}
+              className="btn btn-secondary btn-lg pricing__cta"
+              rel="noopener noreferrer"
+            >
               {freeTier.cta}
             </a>
           </article>
@@ -186,7 +191,11 @@ export function Pricing() {
                     {tier.cta}
                   </button>
                 ) : (
-                  <a href="https://app.planningwithyou.com/register" className="btn btn-primary btn-lg pricing__cta">
+                  <a
+                    href={APP_REGISTER_URL}
+                    className="btn btn-primary btn-lg pricing__cta"
+                    rel="noopener noreferrer"
+                  >
                     {tier.cta}
                   </a>
                 )}
