@@ -1,0 +1,31 @@
+# Example nginx config for planningwithyou.com (marketing static site).
+# Serve the Vite build output from /var/www/planningwithyou-web/dist
+#
+# Important for Facebook Open Graph:
+# - Do NOT proxy this host to the Django API (HEAD requests must return 200 for static files).
+# - Share https://planningwithyou.com/ (not www) until www has a valid TLS certificate.
+
+server {
+    listen 443 ssl http2;
+    server_name planningwithyou.com;
+
+    root /var/www/planningwithyou-web/dist;
+    index index.html;
+
+    location = /robots.txt {
+        try_files /robots.txt =404;
+    }
+
+    location = /sitemap.xml {
+        try_files /sitemap.xml =404;
+    }
+
+    location /og/ {
+        try_files $uri =404;
+        add_header Cache-Control "public, max-age=86400";
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
