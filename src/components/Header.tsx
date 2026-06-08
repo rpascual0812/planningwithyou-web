@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { APP_SIGN_IN_URL } from '../config/appLinks'
 import { SectionLink } from './SectionLink'
 
 const navLinks = [
@@ -34,9 +35,13 @@ export function Header() {
           ))}
         </nav>
         <div className="header__actions">
-          <SectionLink sectionId="pricing" className="btn btn-secondary header__sign-in">
+          <a
+            href={APP_SIGN_IN_URL}
+            className="btn btn-secondary header__sign-in"
+            rel="noopener noreferrer"
+          >
             Sign in
-          </SectionLink>
+          </a>
           <SectionLink sectionId="pricing" className="btn btn-primary">
             Get started
           </SectionLink>
