@@ -4,6 +4,7 @@ import { ScrollToTop } from './components/ScrollToTop'
 import { HomePage } from './pages/HomePage'
 import { PlatformTermsPage } from './pages/PlatformTermsPage'
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage'
+import { RefundPolicyPage } from './pages/RefundPolicyPage'
 import { TermsAndConditionsPage } from './pages/TermsAndConditionsPage'
 import './App.css'
 
@@ -20,6 +21,7 @@ function App() {
           element={<TermsAndConditionsPage />}
         />
         <Route path="/platform-terms" element={<PlatformTermsPage />} />
+        <Route path="/refund-policy" element={<RefundPolicyPage />} />
       </Routes>
     </BrowserRouter>
   )

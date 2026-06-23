@@ -12,7 +12,7 @@ export function Hero() {
           <p className="hero__subtitle">
             Create polished quotations for any event, send them to customers,
             manage your schedule, sync with Gmail, Outlook, Apple &amp; Yahoo —
-            and get paid securely through Paymongo.
+            and get paid securely through Xendit.
           </p>
           <div className="hero__cta">
             <a href="#pricing" className="btn btn-primary btn-lg">
@@ -32,7 +32,7 @@ export function Hero() {
               <span>Email &amp; calendar sync</span>
             </li>
             <li>
-              <strong>Paymongo</strong>
+              <strong>Xendit</strong>
               <span>Subscriptions &amp; customer payments</span>
             </li>
           </ul>

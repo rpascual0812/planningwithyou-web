@@ -4,7 +4,7 @@ export function PlatformTermsPage() {
   return (
     <LegalPage
       title="Platform Terms of Use: User Access & Responsibilities"
-      lastUpdated="May 26, 2026"
+      lastUpdated="June 9, 2026"
     >
       <p>
         These Platform Terms of Use (&quot;Platform Terms&quot;) supplement our
@@ -18,8 +18,8 @@ export function PlatformTermsPage() {
       <p>
         By creating an account or using platform features—including quotations,
         calendar management, customer directory, email/calendar integrations,
-        and Paymongo payment tools—you agree to these Platform Terms in addition
-        to our Privacy Policy and Terms and Conditions of Use.
+        and Xendit payment tools—you agree to these Platform Terms in addition
+        to our Privacy Policy, Refund Policy, and Terms and Conditions of Use.
       </p>
 
       <h2>2. User access</h2>
@@ -64,9 +64,9 @@ export function PlatformTermsPage() {
       <h3>3.3 Quotation and payment conduct</h3>
       <p>
         You are responsible for quotation content, pricing, deposits, refunds,
-        and dispute resolution with your customers. Secured Paymongo payment
-        links must not be used for illegal goods, services, or activities
-        prohibited by Paymongo or applicable law.
+        and dispute resolution with your customers. Secured Xendit payment links
+        must not be used for illegal goods, services, or activities prohibited
+        by Xendit or applicable law.
       </p>
       <h3>3.4 Calendar and communications</h3>
       <p>
@@ -114,7 +114,7 @@ export function PlatformTermsPage() {
       <p>
         We strive to maintain platform availability but do not guarantee
         uninterrupted access. Scheduled maintenance and third-party outages
-        (including email providers and Paymongo) may affect functionality.
+        (including email providers and Xendit) may affect functionality.
       </p>
 
       <h2>9. Updates to Platform Terms</h2>

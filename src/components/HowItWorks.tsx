@@ -17,7 +17,7 @@ const steps = [
   {
     step: '04',
     title: 'Get paid securely',
-    text: 'Share a Paymongo payment link so customers pay online. Funds flow to you through a secured checkout.',
+    text: 'Share a Xendit payment link so customers pay online. Funds flow to you through a secured checkout.',
   },
 ]
 

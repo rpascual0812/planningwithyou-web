@@ -2,7 +2,7 @@ import { LegalPage } from '../components/LegalPage'
 
 export function PrivacyPolicyPage() {
   return (
-    <LegalPage title="Privacy Policy" lastUpdated="May 26, 2026">
+    <LegalPage title="Privacy Policy" lastUpdated="June 9, 2026">
       <p>
         Planning With You (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;)
         operates the website and platform at planningwithyou.com (the
@@ -14,7 +14,7 @@ export function PrivacyPolicyPage() {
       <h3>Account information</h3>
       <p>
         When you register, we collect information such as your name, email
-        address, business name, and billing details provided to Paymongo for
+        address, business name, and billing details provided to Xendit for
         subscription payments.
       </p>
       <h3>Customer data you store</h3>
@@ -38,7 +38,7 @@ export function PrivacyPolicyPage() {
       <h3>Payment information</h3>
       <p>
         Subscription payments and customer payment links are processed by
-        Paymongo. Card details are collected and stored by Paymongo in
+        Xendit. Card and payment details are collected and stored by Xendit in
         accordance with their privacy practices; we do not store full card
         numbers on our servers.
       </p>
@@ -52,7 +52,7 @@ export function PrivacyPolicyPage() {
       <h2>2. How we use your information</h2>
       <ul>
         <li>Provide, operate, and maintain the Service</li>
-        <li>Process subscriptions and facilitate customer payments via Paymongo</li>
+        <li>Process subscriptions and facilitate customer payments via Xendit</li>
         <li>Send quotations and calendar-related communications you request</li>
         <li>Sync with connected email and calendar providers</li>
         <li>Respond to support requests and send service-related notices</li>
@@ -64,7 +64,7 @@ export function PrivacyPolicyPage() {
       <p>We may share information with:</p>
       <ul>
         <li>
-          <strong>Paymongo</strong> — for subscription billing and customer
+          <strong>Xendit</strong> — for subscription billing and customer
           payment processing
         </li>
         <li>

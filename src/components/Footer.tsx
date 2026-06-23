@@ -11,6 +11,7 @@ const productLinks = [
 const legalLinks = [
   { to: '/privacy-policy', label: 'Privacy Policy' },
   { to: '/terms-and-conditions', label: 'Terms of Service' },
+  { to: '/refund-policy', label: 'Refund Policy' },
   {
     to: '/platform-terms',
     label: 'Terms of Use',

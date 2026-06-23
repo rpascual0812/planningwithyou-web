@@ -2,7 +2,7 @@ import { LegalPage } from '../components/LegalPage'
 
 export function TermsAndConditionsPage() {
   return (
-    <LegalPage title="Terms and Conditions of Use" lastUpdated="May 26, 2026">
+    <LegalPage title="Terms and Conditions of Use" lastUpdated="June 9, 2026">
       <p>
         These Terms and Conditions of Use (&quot;Terms&quot;) govern your access
         to and use of the Planning With You website and software platform at
@@ -23,8 +23,11 @@ export function TermsAndConditionsPage() {
         Planning With You provides tools for event professionals and businesses
         to create and send quotations, manage calendars, store customer contact
         information, integrate with email and calendar providers (Gmail, Outlook,
-        Apple, and Yahoo), and process payments through Paymongo including
-        subscription billing and secured payment links for your customers.
+        Apple, and Yahoo), and process payments through Xendit including
+        subscription billing and secured payment links for your customers. Our{' '}
+        <a href="/privacy-policy">Privacy Policy</a> and{' '}
+        <a href="/refund-policy">Refund Policy</a> also apply to your use of the
+        Service.
       </p>
 
       <h2>3. Account registration</h2>
@@ -37,15 +40,16 @@ export function TermsAndConditionsPage() {
       <h2>4. Subscriptions and fees</h2>
       <p>
         Access to certain features requires a paid subscription billed monthly or
-        yearly through Paymongo. Fees are charged in advance and are
-        non-refundable except where required by law or expressly stated. We may
-        change pricing with reasonable notice; continued use after a price change
-        constitutes acceptance.
+        yearly through Xendit. Fees are charged in advance and are
+        non-refundable except where required by law or as described in our{' '}
+        <a href="/refund-policy">Refund Policy</a>. We may change pricing with
+        reasonable notice; continued use after a price change constitutes
+        acceptance.
       </p>
 
       <h2>5. Customer payments</h2>
       <p>
-        Payment links issued to your customers are processed by Paymongo. You are
+        Payment links issued to your customers are processed by Xendit. You are
         responsible for the accuracy of amounts, descriptions, and tax obligations
         on quotations and payment requests. We are not a party to transactions
         between you and your customers.
@@ -73,7 +77,7 @@ export function TermsAndConditionsPage() {
 
       <h2>8. Third-party services</h2>
       <p>
-        Integrations with Gmail, Outlook, Apple, Yahoo, and Paymongo are subject
+        Integrations with Gmail, Outlook, Apple, Yahoo, and Xendit are subject
         to those providers&apos; terms and policies. We are not responsible for
         third-party outages, changes, or actions.
       </p>

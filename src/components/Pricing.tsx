@@ -22,7 +22,7 @@ const freeTier = {
     'Unlimited quotations',
     'Calendar management',
     'Customer directory',
-    'Paymongo payment links for customers',
+    'Xendit payment links for customers',
     'Reports & analytics',
   ],
   cta: 'Get started free',
@@ -35,7 +35,7 @@ const paidTiers: PaidTier[] = [
     featured: true,
     monthly: {
       price: '₱995',
-      note: 'Billed monthly via Paymongo',
+      note: 'Billed monthly via Xendit',
     },
     yearly: {
       price: '₱9,950',
@@ -46,7 +46,7 @@ const paidTiers: PaidTier[] = [
       'Calendar management',
       'Customer directory',
       'Gmail, Outlook, Apple & Yahoo sync',
-      'Paymongo payment links for customers',
+      'Xendit payment links for customers',
       'Reports & analytics',
       'Email support',
     ],
@@ -201,7 +201,7 @@ export function Pricing() {
                 )}
                 {!isComingSoon && (
                   <p className="pricing__footer">
-                    Credit card required · Powered by Paymongo
+                    Credit card required · Powered by Xendit
                   </p>
                 )}
               </article>

@@ -410,7 +410,7 @@
 }
 
 .integrations__list li::before {
-  content: '✓';
+  content: "✓";
   color: var(--teal-600);
   font-weight: 700;
 }
@@ -779,8 +779,8 @@
 }
 
 .footer__legal {
-  max-width: 28rem;
-  justify-content: flex-end;
+  max-width: 20rem;
+  justify-content: flex-start;
 }
 
 .footer__nav a,
