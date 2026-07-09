@@ -54,22 +54,24 @@ const paidTiers: PaidTier[] = [
   },
   {
     id: 'ai-plus',
-    name: 'AI Plus',
+    name: 'Pro+',
     comingSoon: true,
     monthly: {
       price: '₱1,999',
       note: 'Pricing announced at launch',
+      // note: 'AI-powered quotations, smart suggestions, and automated follow-ups are in development. Stay tuned.'
     },
     yearly: {
       price: '₱19,990',
       note: 'Pricing announced at launch',
+      // note: 'AI-powered quotations, smart suggestions, and automated follow-ups are in development. Stay tuned.'
     },
     features: [
-      'Everything in Professional',
-      'AI-assisted quotation drafting',
-      'Smart event & pricing suggestions',
-      'Automated follow-up reminders',
-      'Priority email & chat support',
+      // 'Everything in Professional',
+      // 'AI-assisted quotation drafting',
+      // 'Smart event & pricing suggestions',
+      // 'Automated follow-up reminders',
+      // 'Priority email & chat support',
     ],
     cta: 'Coming soon',
   },
@@ -158,8 +160,7 @@ export function Pricing() {
                       Upcoming major update
                     </p>
                     <p className="pricing__note">
-                      AI-powered quotations, smart suggestions, and automated
-                      follow-ups are in development. Stay tuned.
+                      {billing.note}
                     </p>
                   </>
                 ) : (
